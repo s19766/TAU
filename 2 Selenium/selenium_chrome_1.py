@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import logging
 
+
 logger = logging.getLogger('example')
 logger.setLevel(logging.INFO)
 ch = logging.StreamHandler()
