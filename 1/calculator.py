@@ -1,4 +1,4 @@
-#Damian Eggert s19766
+# Damian Eggert s19766
 
 class Calculator:
     def __init__(self):
