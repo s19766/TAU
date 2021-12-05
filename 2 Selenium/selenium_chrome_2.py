@@ -24,11 +24,13 @@ browser.get('https://robotframework.org/')
 
 logger.info('Find and click docs')
 
-browser.find_element(By.XPATH, "/html/body/div/div[3]/div/div[2]/div[1]/button").click()
+docs_button = browser.find_element(By.XPATH, "/html/body/div/div[3]/div/div[2]/div[1]/button")
+docs_button.click()
 
 logger.info('Go to User Guide')
 
-browser.find_element(By.XPATH, "/html/body/div/div[3]/div/div[2]/div[1]/div/div[1]/a").click()
+user_guide = browser.find_element(By.XPATH, "/html/body/div/div[3]/div/div[2]/div[1]/div/div[1]/a")
+user_guide.click()
 
 time.sleep(2)
 
@@ -44,9 +46,12 @@ time.sleep(1)
 
 logger.info('Find and open documentation for Builtin library - version 4.0')
 
-browser.find_element(By.XPATH, '//*[@id="BuiltIn"]').click()
-browser.find_element(By.XPATH, "/html/body/div/table[1]/tbody/tr[2]/td[2]/select/option[8]").click()
-browser.find_element(By.XPATH, "/html/body/div/table[1]/tbody/tr[2]/td[2]/button").click()
+doc = browser.find_element(By.XPATH, '//*[@id="BuiltIn"]')
+doc.click()
+version = browser.find_element(By.XPATH, "/html/body/div/table[1]/tbody/tr[2]/td[2]/select/option[8]")
+version.click()
+exact_version = browser.find_element(By.XPATH, "/html/body/div/table[1]/tbody/tr[2]/td[2]/button")
+exact_version.click()
 
 logger.info('Current url should be https://robotframework.org/robotframework/4.0/libraries/BuiltIn.html')
 

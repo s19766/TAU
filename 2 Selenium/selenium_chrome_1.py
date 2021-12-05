@@ -25,15 +25,19 @@ browser.get('https://www.morele.net/')
 
 logger.info('Click login/register button')
 
-browser.find_element(By.XPATH, "/html/body/div[2]/header/div/div/div/div[2]/div/div[2]/div/div[4]/a").click()
+button = browser.find_element(By.XPATH, "/html/body/div[2]/header/div/div/div/div[2]/div/div[2]/div/div[4]/a")
+button.click()
 
 time.sleep(1)
 
 logger.info('Try to login')
 
-browser.find_element(By.XPATH, '//*[@id="username"]').send_keys("Login@wp.pl")
-browser.find_element(By.XPATH, '//*[@id="password-log"]').send_keys("Password")
-browser.find_element(By.XPATH, "/html/body/main/div/div/div[3]/form/button").click()
+login = browser.find_element(By.XPATH, '//*[@id="username"]')
+login.send_keys("Login@wp.pl")
+password = browser.find_element(By.XPATH, '//*[@id="password-log"]')
+password.send_keys("Password")
+action = browser.find_element(By.XPATH, "/html/body/main/div/div/div[3]/form/button")
+action.click()
 
 time.sleep(1)
 
@@ -45,6 +49,7 @@ time.sleep(2)
 
 logger.info('Confirm the received error')
 
-browser.find_element(By.XPATH, "/html/body/div[2]/div/div/button").click()
+error_button = browser.find_element(By.XPATH, "/html/body/div[2]/div/div/button")
+error_button.click()
 
 browser.close()
