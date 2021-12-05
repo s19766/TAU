@@ -31,7 +31,7 @@ search_bar = browser.find_element(By.XPATH, "/html/body/div[2]/header/div/div/di
 search_bar.click()
 time.sleep(1)
 search_bar.send_keys("karty graficzne")
-time.sleep(3)
+time.sleep(5)
 search_button = browser.find_element(By.XPATH, "/html/body/div[2]/header/div/div/div/div[2]/div/div[1]/form/button")
 search_button.click()
 time.sleep(2)
