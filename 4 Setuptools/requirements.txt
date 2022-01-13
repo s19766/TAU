@@ -1,0 +1,16 @@
+py~=1.11.0
+colorama~=0.4.4
+pip~=21.3.1
+toml~=0.10.2
+configparser~=5.0.2
+cryptography~=36.0.0
+lxml~=4.6.4
+attrs~=21.2.0
+pytest~=6.2.5
+pluggy~=1.0.0
+iniconfig~=1.1.1
+atomicwrites~=1.4.0
+numpy~=1.21.2
+pyparsing~=3.0.4
+setuptools~=60.5.0
+termcolor~=1.1.0
